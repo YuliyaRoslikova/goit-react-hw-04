@@ -6,8 +6,8 @@ const ImageGallery = ({ items, setOpenedCard }) => {
     <ul className={css.imageGallery}>
       {items.map(item => {
         return (
-          <li key={item.id} onClick={() => setOpenedCard(item)}>
-            <ImageCard cardData={item} />
+          <li key={item.id}>
+            <ImageCard cardData={item} setOpenedCard={setOpenedCard} />
           </li>
         );
       })}
